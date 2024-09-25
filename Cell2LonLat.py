@@ -92,5 +92,9 @@ for index, row in merged_df.iterrows():
 merged_df['Latitude'] = latitudes  # Add Latitude column
 merged_df['Longitude'] = longitudes  # Add Longitude column
 
-print("Cellid2LonLat.csv files merged successfully.")
+output_file = 'Cell2LonLat.csv'  # Desired output file name
+merged_df.to_csv(output_file, index=False)
+
+
+print("Cellid2LonLat.csv files created successfully.")
 print(merged_df)  # Display the merged DataFrame
