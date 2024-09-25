@@ -1,67 +1,11 @@
 ###############Decipher the wqm_apl.run and write it in netCDF########################
 Please Run Decipher.py, code is linked to the utils.py and the config.json. Please modify the config.json based on your demand, like change the output directory. No need to change the utils.py and Decipher.py. Utils.py includes all the functions which are used in the Decipher.py. 
-NetCDFReader.py provides you the ability to read the deciphered netCDF output. This netCDF is saving as time teries data for one variable per file. 
+NetCDFReader.py provides you the ability to read the deciphered netCDF output. This netCDF is saving as time teries data for one variable per file. Also provide a ProbeGUI.py tool for probing the data in an interaction interface.
+
+The col_cbay_56920.dat and col_cbay_56920xy.csv files are provided by Richard Tian, which contains the CellID, I,J,Layer#, UTM-X,UTM-Y mapping. Runthe Cell2LonLat.py will combine the informations of the two files together, and also saved Longitute and Latitude in the file Cell2LonLat.csv file. This file is neccessary for the Decipher.py code.
 
 The netCDF's structure is showing below. Run this code, you can probe the data by proving the Cell_ID, Layer#, the day number. 
 Run the NetCDFReader.py will get the output look like this:
-Enter the Cell_ID index you are looking for: 1
-Enter the Jday index you are looking for: 1
-Enter the Layernumber index you are looking for: 1
-NetCDF File Structure:
-
-Dimensions:
-  Cell_ID: size=11064
-  Layer#: size=19
-  time: size=2
-
-Variables:
-  Latitude:
-    Dimensions: ('Cell_ID', 'Layer#')
-    Data type: float32
-    Attributes:
-      _FillValue: nan
-      units: degrees_north
-  Longitude:
-    Dimensions: ('Cell_ID', 'Layer#')
-    Data type: float32
-    Attributes:
-      _FillValue: nan
-      units: degrees_east
-  Date:
-    Dimensions: ('time',)
-    Data type: <class 'str'>
-    Attributes:
-      _FillValue: nan
-      units: days y-m-d
-  Depth:
-    Dimensions: ('Cell_ID', 'Layer#', 'time')
-    Data type: float32
-    Attributes:
-      _FillValue: nan
-      units: meters
-  nwcbox:
-    Dimensions: ('Cell_ID', 'Layer#', 'time')
-    Data type: float32
-    Attributes:
-      _FillValue: nan
-      units: #
-  S:
-    Dimensions: ('Cell_ID', 'Layer#', 'time')
-    Data type: float32
-    Attributes:
-      _FillValue: nan
-      units: ppt
-
-Data points for input indices (Cell_ID=1, ctime=1, Layernumber=1):
-Latitude: 36.720436096191406 (degrees_north)
-Longitude: -76.22826385498047 (degrees_east)
-Date: 1990-12-31-00 (days y-m-d)
-Depth: 1.0670000314712524 (meters)
-nwcbox: 1.0 (#)
-S: 10.392138481140137 (ppt)
-
-
-
 
 Decipher.py is reading and writing netCDF the wqm_apl.run(a binary unformatted output file provided by Richard Tian)
  1) need the "wqm_qpl.run" file
@@ -101,6 +45,7 @@ Processed # of nwcbox: 1000, please wait...
 Processed # of nwcbox: 56000, please wait...
 Time taken for Date 1991-01-01-00: 434.74 seconds
 All files created successfully!
+
 
 
 
