@@ -71,3 +71,9 @@ visualize basic time series plots based on the selected point.
 ![alt_text](Images/Picture4.png)
 ![alt_text](Images/Picture5.png)
 ![alt_text](Images/Picture6.png)
+
+**Compare the NetCDF output with Fortran output**
+
+-   **Fortran Script:** skill_r223_mde_allv.f(not provided here, please request it from Richard Tian)
+
+-   **We provide some sample output from Fortran and do comparison:** See Fortran output.cvs
