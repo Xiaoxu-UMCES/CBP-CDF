@@ -48,12 +48,10 @@ directory. Then, run Decipher.py, which uses functions defined in
 utils.py and the configurations set in config.json. Generally, you do
 not need to modify utils.py or Decipher.py.
 
-*You should see below in your terminal:\
-
-
+*You should see below in your terminal:
+![alt_text](Images/Picture2.png)
 *...*
-
-
+![alt_text](Images/Picture3.png)
 **Checking Data Saved in NetCDF**
 
 -   **Reader Script:** netCDFReader.py
@@ -68,5 +66,6 @@ visualize basic time series plots based on the selected point.
 
 *You should see below like this in your terminal:
 
-
-
+![alt_text](Images/Picture4.png)
+![alt_text](Images/Picture5.png)
+![alt_text](Images/Picture6.png)
