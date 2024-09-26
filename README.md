@@ -30,7 +30,9 @@ This script merges the information from the two input files to generate
 the Cell2LonLat.csv file, which contains the longitude and latitude data
 for each cell. This CSV file is essential for the next step.\
 \
-*You should see below in your terminal:\
+*You should see below in your terminal:
+![alt_text](Images/Picture1.png)
+
 
 
 **Deciphering**
