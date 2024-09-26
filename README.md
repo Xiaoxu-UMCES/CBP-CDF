@@ -52,6 +52,8 @@ not need to modify utils.py or Decipher.py.
 ![alt_text](Images/Picture2.png)
 *...*
 ![alt_text](Images/Picture3.png)
+
+
 **Checking Data Saved in NetCDF**
 
 -   **Reader Script:** netCDFReader.py
