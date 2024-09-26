@@ -76,4 +76,4 @@ visualize basic time series plots based on the selected point.
 
 -   **Fortran Script:** skill_r223_mde_allv.f(not provided here, please request it from Richard Tian)
 
--   **We provide some sample output from Fortran and do comparison:** See Fortran output.cvs
+-   **We provide some sample output from Fortran and do comparison:** See Fortran output.xlsx
