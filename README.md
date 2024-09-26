@@ -68,7 +68,7 @@ visualize basic time series plots based on the selected point.
 
 *You should see below like this in your terminal:
 
-![alt_text](Images/Picture4.png)
+![alt_text](Images/Picture.png)
 ![alt_text](Images/Picture5.png)
 ![alt_text](Images/Picture6.png)
 
