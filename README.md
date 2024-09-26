@@ -31,8 +31,7 @@ the Cell2LonLat.csv file, which contains the longitude and latitude data
 for each cell. This CSV file is essential for the next step.\
 \
 *You should see below in your terminal:\
-*![A screenshot of a computer code Description automatically
-generated](media/image1.png){width="6.5in" height="2.078472222222222in"}
+
 
 **Deciphering**
 
@@ -48,12 +47,10 @@ utils.py and the configurations set in config.json. Generally, you do
 not need to modify utils.py or Decipher.py.
 
 *You should see below in your terminal:\
-*![A screenshot of a computer code Description automatically
-generated](media/image2.png){width="6.5in" height="4.442361111111111in"}
+
 
 *...*
 
-![](media/image3.png){width="6.5in" height="0.4236111111111111in"}
 
 **Checking Data Saved in NetCDF**
 
@@ -67,15 +64,7 @@ probe_GUI.py provides an interface for exploring the data. It enables
 users to identify the nearest six grid points to a selected location and
 visualize basic time series plots based on the selected point.
 
-*You should see below like this in your terminal:*![A screenshot of a
-computer program Description automatically
-generated](media/image4.png){width="4.178571741032371in"
-height="6.243286307961505in"}
+*You should see below like this in your terminal:
 
-![A screenshot of a computer generated image Description automatically
-generated](media/image5.png){width="5.857142388451444in"
-height="3.0866983814523183in"}
 
-![A graph with different colored lines Description automatically
-generated with medium confidence](media/image6.png){width="6.5in"
-height="2.901388888888889in"}
+
