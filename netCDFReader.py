@@ -75,10 +75,10 @@ def print_data_for_user_input(file_path, cell_id_index, jday_index, layer_index)
                 # Prepare indexing based on dimensions
                 if num_dims == 3:
                     # 3D variable: Index using all three indices
-                    value = var_data[cell_id_index, jday_index, layer_index]
+                    value = var_data[cell_id_index, layer_index,jday_index]
                 elif num_dims == 2:
                     # 2D variable: Index using Cell_ID and Jday
-                    value = var_data[cell_id_index, jday_index]
+                    value = var_data[cell_id_index, layer_index]
                 elif num_dims == 1:
                     # 1D variable: Index using the time dimension
                     value = var_data[jday_index]  # Assuming 'time' dimension corresponds to jday_index
@@ -97,12 +97,12 @@ def print_data_for_user_input(file_path, cell_id_index, jday_index, layer_index)
 
 
 def main():
-    file_path = 'S.nc'  # Replace with your actual NetCDF file path
+    file_path = '/Users/xiaoxug/CBP-Decipher/netCDF_Output_old/S.nc'  # Replace with your actual NetCDF file path
     
     # Ask the user for input indices
     cell_id_index = int(input("Enter the Cell_ID index you are looking for: "))-1
-    jday_index = int(input("Enter the Jday index you are looking for: "))-1
     layer_index = int(input("Enter the Layernumber index you are looking for: "))-1
+    jday_index = int(input("Enter the Jday index you are looking for: "))-1
 
     print_data_for_user_input(file_path, cell_id_index, jday_index, layer_index)
     

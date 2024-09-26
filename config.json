@@ -6,7 +6,7 @@
         "factor_kadpo4": 1.0,
         "nsbp": 11064, 
         "nwcbox":56920,
-        "output_directory": "/Users/xiaoxug/CBP-Decipher/netCDF_Output" 
+        "output_directory": "/Users/xiaoxug/CBP-Decipher/netCDF_Output_test" 
     },
     "data_dimensions": {
         "dim_c1_array": 36,
@@ -135,7 +135,7 @@
         "start_month": 12,
         "start_day": 31,
         "binary_filename": "/Users/xiaoxug/Desktop/wql/wqm_apl.run",
-        "csv_file": "/Users/xiaoxug/Desktop/wql/merged_output.csv",
+        "csv_file": "/Users/xiaoxug/CBP-Decipher/Cell2LonLat.csv",
         "NAC": 28,
         "nwcbox": 56920
     }

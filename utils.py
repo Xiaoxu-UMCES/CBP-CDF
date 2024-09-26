@@ -330,13 +330,13 @@ def create_netcdf_file(var_names: List[str], var_units: List[str], dimensions: t
         file.createDimension('time', None)  # Use time as a dimension
         
         # Create fixed variables
-        lat = file.createVariable('Latitude', 'f4', ('Cell_ID', 'Layer#'), zlib=True, fill_value=np.nan)
+        lat = file.createVariable('Latitude', 'f4', dimensions, zlib=True, fill_value=np.nan)
         lat.units = 'degrees_north'
         
-        lon = file.createVariable('Longitude', 'f4', ('Cell_ID', 'Layer#'), zlib=True, fill_value=np.nan)
+        lon = file.createVariable('Longitude', 'f4', dimensions, zlib=True, fill_value=np.nan)
         lon.units = 'degrees_east'
         
-        date = file.createVariable('Date', 'S19', ('time',), fill_value=np.nan)
+        date = file.createVariable('Date', 'S19', dimensions, fill_value=np.nan)
         date.units = 'days y-m-d'  # Adjust to your reference date
         
         depth = file.createVariable('Depth', 'f4', dimensions, zlib=True, fill_value=np.nan)

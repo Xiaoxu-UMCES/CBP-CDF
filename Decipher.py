@@ -90,11 +90,12 @@ for jday in range(start_jday, end_jday + 1):
     for nwcbox_val in range(1, nwcbox + 1):
         start_time_l = time.time()
         matching_rows = df[df['nwcbox_value'] == nwcbox_val]
-        layernumber, cell_id = matching_rows['layer#'].values[0], matching_rows['Cell_ID'].values[0]
+        layernumber, cell_id = matching_rows['Layer#'].values[0], matching_rows['Cell_ID'].values[0]
         Depth = 1.067 if layernumber == 1 else (layernumber - 2) * 1.524 + 2.134 + 0.762
-
-        PosX, PosY = matching_rows['X'].values[0], matching_rows['Y'].values[0]
-        lon, lat = utm_to_latlon(PosX, PosY, utm_zone=utm_zone)
+        
+        #PosX, PosY = matching_rows['X'].values[0], matching_rows['Y'].values[0]
+        #lon, lat = utm_to_latlon(PosX, PosY, utm_zone=utm_zone)
+        lon, lat = matching_rows['Longitude'].values[0], matching_rows['Latitude'].values[0]
 
         # Compute values using helper function
         c1_array_nwcbox = c1_array[:, nwcbox_val - 1]
@@ -117,9 +118,9 @@ for jday in range(start_jday, end_jday + 1):
         for var_name in calc_var_names:
             calc_file = calc_var_files[var_name]
             calc_file.variables[var_name][cell_id - 1, layernumber - 1, jday - start_jday] = computed_values['selected_values'][calc_var_names.index(var_name)]
-            calc_file.variables['Latitude'][cell_id - 1, layernumber - 1] = lat
-            calc_file.variables['Longitude'][cell_id - 1, layernumber - 1] = lon
-            calc_file.variables['Date'][jday - start_jday] = time_string
+            calc_file.variables['Latitude'][cell_id - 1, layernumber - 1,jday - start_jday] = lat
+            calc_file.variables['Longitude'][cell_id - 1, layernumber - 1,jday - start_jday] = lon
+            calc_file.variables['Date'][cell_id - 1, layernumber - 1,jday - start_jday] = time_string
             calc_file.variables['Depth'][cell_id - 1, layernumber - 1, jday - start_jday] = Depth
             calc_file.variables['nwcbox'][cell_id - 1, layernumber - 1, jday - start_jday] = nwcbox_val
 
@@ -128,9 +129,9 @@ for jday in range(start_jday, end_jday + 1):
         for var_name in var_names:
             var_file = var_files[var_name]
             var_file.variables[var_name][cell_id - 1, layernumber - 1, jday - start_jday] = c1_array_nwcbox[var_names.index(var_name)]
-            var_file.variables['Latitude'][cell_id - 1, layernumber - 1] = lat
-            var_file.variables['Longitude'][cell_id - 1, layernumber - 1] = lon
-            var_file.variables['Date'][jday - start_jday] = time_string
+            var_file.variables['Latitude'][cell_id - 1, layernumber - 1,jday - start_jday] = lat
+            var_file.variables['Longitude'][cell_id - 1, layernumber - 1,jday - start_jday] = lon
+            var_file.variables['Date'][cell_id - 1, layernumber - 1,jday - start_jday] = time_string
             var_file.variables['Depth'][cell_id - 1, layernumber - 1, jday - start_jday] = Depth
             var_file.variables['nwcbox'][cell_id - 1, layernumber - 1, jday - start_jday] = nwcbox_val
               
